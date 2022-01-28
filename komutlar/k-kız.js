@@ -23,7 +23,6 @@ let isim = args[1]
 if (!isim) return message.channel.send(`**Bir İsim Belirt!**`)
 let yaş = args[2]
 if (!yaş) return message.channel.send(`**Bir Yaş Belirt!**`)
-if(isim && member) member.setNickname(` ${tag} ${isim} | ${yaş}`); 
 if(isim) member.setNickname(`${tag ? tag: ''} ${isim} | ${yaş}`);
 member.roles.remove(kayıtsız)
 member.roles.add(kızrol)
