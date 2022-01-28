@@ -1,5 +1,5 @@
 const discord = require('discord.js')
-const db = require('croxydb');
+const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
 
@@ -35,7 +35,7 @@ const embed = new discord.MessageEmbed()
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setColor("#f1ebeb")
-.setDescription(`${member} Kullanıcının ismi \`${tag ? tag: } ${isim} | ${yaş}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
+.setDescription(`${member} Kullanıcının ismi \`${member.user.username.includes(tag) ? tag : tag} ${isim} | ${yaş}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
 message.channel.send(embed)
 
 

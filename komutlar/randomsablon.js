@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const db = require('quick.db');
 
 exports.run = async(client, message, args) => {
-    const icindekiler = require(`../oyun.json`)
+    const icindekiler = require(`../şablonlar.json`)
     const icindeki = icindekiler[Math.floor(Math.random() * icindekiler.length)];
 
    message.channel.send(new MessageEmbed()

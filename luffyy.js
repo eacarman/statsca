@@ -129,22 +129,22 @@ client.yetkiler = message => {
 
  
 
-client.login(ayarlar.token)
+client.login(process.env.token)
 
 //hg//
 client.on("guildMemberAdd", async member => {
   const { MessageEmbed } = require('discord.js');
 
-  let kayıtsız = db.fetch(`kayıtsız_${message.guild.id}`)
-  let kanal = db.fetch(`gkanal_${message.guild.id}`)
-  let yetkili = db.fetch(`yetkilir_${message.guild.id}`)
+  let kayıtsız = db.fetch(`kayıtsız_${member.guild.id}`)
+  let kanal = db.fetch(`gkanal_${member.guild.id}`)
+  let yetkili = db.fetch(`yetkilir_${member.guild.id}`)
 
   member.setNickname('KAYITSIZ')
   member.roles.add('Rol İd')
  client.channels.cache.get(kanal).send(new MessageEmbed()
 
  .setDescription(`
- ${message.author} **Sunucumuza Katıldı!**
+ ${member.author} **Sunucumuza Katıldı!**
 
  Kayıt Olmak İçin ${yetkili} Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
 
