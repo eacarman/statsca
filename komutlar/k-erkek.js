@@ -24,7 +24,7 @@ if (!isim) return message.channel.send(`**Bir İsim Belirt!**`)
 let yaş = args[2]
 if (!yaş) return message.channel.send(`**Bir Yaş Belirt!**`)
 if(isim && member) member.setNickname(` ${tag } ${isim} | ${yaş}`); 
-if(isim) member.setNickname(`${isim} | ${yaş}`);
+if(isim) member.setNickname(`${member.user.username.includes(tag) ? tag : null} ${isim} | ${yaş}`);
 member.roles.remove(kayıtsız)
 member.roles.add(erkekrol)
 const kayıtolan = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 

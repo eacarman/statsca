@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
 
 let kanal = db.fetch(`kkanal_${message.guild.id}`)
 let kayıtsız = db.fetch(`kayıtsız_${message.guild.id}`)
-let kızkrol = db.fetch(`kızr_${message.guild.id}`)
+let kızrol = db.fetch(`kızr_${message.guild.id}`)
 let yetkili = db.fetch(`yetkilir_${message.guild.id}`)
 let sohbet = db.fetch(`skanal_${message.guild.id}`)
 let tag = db.fetch(`tag_${message.guild.id}`)
