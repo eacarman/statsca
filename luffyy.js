@@ -141,18 +141,18 @@ client.on("guildMemberAdd", async member => {
   let yetkili = db.fetch(`yetkilir_${member.guild.id}`)
 
   member.setNickname('KAYITSIZ')
-  member.roles.add('Rol İd')
+  member.roles.add(kayıtsız)
  client.channels.cache.get(kanal).send(new MessageEmbed()
 
  .setDescription(`
  ${member} **Sunucumuza Katıldı!**
 
- Kayıt Olmak İçin <@&$${yetkili}> Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
+ Kayıt Olmak İçin <@&${yetkili}> Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
 
  İyi Eğlenceler.`)
  .setColor('#f1ebeb'))
  
- client.channels.cache.get(kanal).send(`<@&$${yetkili}>`)
+ client.channels.cache.get(kanal).send(`<@&${yetkili}>`)
  });
  
 
