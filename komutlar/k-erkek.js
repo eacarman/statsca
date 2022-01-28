@@ -13,7 +13,7 @@ let tag = db.fetch(`tag_${message.guild.id}`)
 
 
  
-if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`**Bu Komutu Kullanmak İçin Gerekli Yetkiniz Yok!**`)
+if(!message.member.roles.cache.has(yetkili))  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`**Bu Komutu Kullanmak İçin Gerekli Yetkiniz Yok!**`)
 if(message.channel.id !== kanal) return message.channel.send(`** Bu komudu sadece <#${kanal}> adlı kanalda kullanabilirsin!**`)
 
 
@@ -24,7 +24,7 @@ if (!isim) return message.channel.send(`**Bir İsim Belirt!**`)
 let yaş = args[2]
 if (!yaş) return message.channel.send(`**Bir Yaş Belirt!**`)
 if(isim && member) member.setNickname(` ${tag } ${isim} | ${yaş}`); 
-if(isim) member.setNickname(`${member.user.username.includes(tag) ? tag : null} ${isim} | ${yaş}`);
+if(isim) member.setNickname(`${tag ? tag: ''} ${isim} | ${yaş}`);
 member.roles.remove(kayıtsız)
 member.roles.add(erkekrol)
 const kayıtolan = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 
@@ -35,7 +35,7 @@ const embed = new discord.MessageEmbed()
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setColor("#f1ebeb")
-.setDescription(`${member} Kullanıcının ismi \`${member.user.username.includes(tag) ? tag : tag} ${isim} | ${yaş}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
+.setDescription(`${member} Kullanıcının ismi \`${tag ? tag: ''} ${isim} | ${yaş}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
 message.channel.send(embed)
 
 

@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
     db.delete(`skanal_${message.guild.id}`)
      db.delete(`tag_${message.guild.id}`)
 
-  const embed = new discord.MessageEmbed()
+  const embed = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))  
   .setColor("#f1ebeb")
   .setDescription(`**Kayıt Başarıyla Sıfırlandı!**`)

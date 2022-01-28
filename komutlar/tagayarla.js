@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   if (!tag) return message.channel.send("**Bir Tag Belirt!**")
   
   db.set(`tag_${message.guild.id}`, tag)
-  const embed = new discord.MessageEmbed()
+  const embed = new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))  
   .setColor("#f1ebeb")
   .setDescription(`Tag Başarıyla Ayarlandı! : \`${tag}\``)

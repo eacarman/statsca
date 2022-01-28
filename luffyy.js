@@ -4,11 +4,12 @@ const client=new Discord.Client();
 const db = require('quick.db')
 const moment = require("moment");
 const ayarlar=require("./ayarlar.json");
-const express = require('express');
-
+const express = require("express")
 const app = express()
-app.get('/', (req, res) => res.send("Bot Aktif"))
-app.listen(process.env.PORT, () => console.log('Port ayarlandı: ' + process.env.PORT))
+app.get("/foo", (req, res, next) => {
+    const foo = JSON.parse(req.body.jsonString)
+})
+process.on("unhandledRejection", (reason, promise) => {})
 
 
 
@@ -144,14 +145,14 @@ client.on("guildMemberAdd", async member => {
  client.channels.cache.get(kanal).send(new MessageEmbed()
 
  .setDescription(`
- ${member.author} **Sunucumuza Katıldı!**
+ ${member} **Sunucumuza Katıldı!**
 
- Kayıt Olmak İçin ${yetkili} Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
+ Kayıt Olmak İçin <@&$${yetkili}> Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
 
  İyi Eğlenceler.`)
- .setColor('2f3136')).then(x => x.delete({timeout: 5000})
- )
- client.channels.cache.get(kanal).send(`${yetkili}`)
+ .setColor('#f1ebeb'))
+ 
+ client.channels.cache.get(kanal).send(`<@&$${yetkili}>`)
  });
  
 
