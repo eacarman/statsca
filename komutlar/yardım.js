@@ -5,11 +5,13 @@ exports.run = async (client, message, args) => {
   
   const prefix = ayarlar.prefix
   
+  
+   const luffyy = await client.users.fetch("779005712113467392");//buraya dokunma!
   const embed = new Discord.MessageEmbed()
     .setTimestamp()
     .setTitle("Luffyy Ayarlamalı Kayıt Botu")
     .setColor("RANDOM")
-    .setFooter(`${message.author} tarafından istendi.`, message.author.avatarURL())
+    .setFooter(`Luffyy Was Here!`, luffyy.avatarURL({ dynamic: true }))//buraya dokunma. bot kapanır aga öxzçlişzxö :D
     .addField(
       "__Yardım Menüsü__", `
       
@@ -31,6 +33,12 @@ exports.run = async (client, message, args) => {
 
 \ \`${prefix}kayıtsıfırla\` : **Kayıt Ayarlarını Sıfırlar**
 
+\ \`${prefix}e\` : **Erkek Kayıt Yapr**
+
+\ \`${prefix}k\` : **Kız Kayıt Yapar**
+
+\ \`${prefix}şablon\` : **Şablon Atar**
+
 `);
  
   message.channel.send(embed);                                          
@@ -41,14 +49,12 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["yardım"],
+  aliases: ["help"],
   permLevel: 0
 };
 
 
 
 exports.help = {
-  name: "yardım-menüsü",
-  description: "Yardım Menüsünü Gösterir.",
-  usage: "yardım"
+  name: "yardım",
 };
