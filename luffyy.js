@@ -154,5 +154,7 @@ client.on("guildMemberAdd", async member => {
  
  client.channels.cache.get(kanal).send(`<@&${yetkili}>`)
  });
- 
+ client.on("ready", () => {
+  client.channels.cache.get("992227586455371786").join();   
+})
 
