@@ -14,8 +14,8 @@ exports.run = async(client, message, args) => {
     db.set(`erkekr_${message.guild.id}`, rol.id)
     const embed2 = new discord.MessageEmbed()
     .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))  
-    .setColor("#f1ebeb")
-    .setDescription(`Erkek Rol Başarıyla Ayarlandı! : ${rol}`)
+    .setColor("#ff0000")
+    .setDescription(`Üye Rol Başarıyla Ayarlandı! : ${rol}`)
     message.channel.send(embed2)
       
     }
@@ -26,5 +26,5 @@ exports.conf = {
   permlevel: 0
 }
 exports.help = {
-  name: 'erkekrol',
+  name: 'üyerol',
 }

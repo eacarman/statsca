@@ -22,8 +22,8 @@ if (!member) return message.channel.send(`**Bir Kişi Belirt!**`)
 let isim = args[1]
 if (!isim) return message.channel.send(`**Bir İsim Belirt!**`)
 let yaş = args[2]
-if (!yaş) return message.channel.send(`**Bir Yaş Belirt!**`)
-if(isim) member.setNickname(`${tag ? tag: ''} ${isim} | ${yaş}`);
+
+if(isim) member.setNickname(`${tag ? tag: 'M:RP'} ${isim}`);
 member.roles.remove(kayıtsız)
 member.roles.add(erkekrol)
 const kayıtolan = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 
@@ -34,7 +34,7 @@ const embed = new discord.MessageEmbed()
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setColor("#f1ebeb")
-.setDescription(`${member} Kullanıcının ismi \`${tag ? tag: ''} ${isim} | ${yaş}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
+.setDescription(`${member} Kullanıcının ismi \`${tag ? tag: 'M:RP'} ${isim}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
 message.channel.send(embed)
 
 
@@ -48,5 +48,5 @@ exports.conf = {
   permlevel: 0
 }
 exports.help = {
-  name: 'erkek',
+  name: 'k',
 }

@@ -6,18 +6,16 @@ exports.run = async (client, message, args) => {
   const prefix = ayarlar.prefix
   
   
-   const luffyy = await client.users.fetch("779005712113467392");//buraya dokunma!
+   const luffyy = await client.users.fetch("904375931655815188");//buraya dokunma!
   const embed = new Discord.MessageEmbed()
     .setTimestamp()
-    .setTitle("Luffyy Ayarlamalı Kayıt Botu")
-    .setColor("RANDOM")
-    .setFooter(`Luffyy Was Here!`, luffyy.avatarURL({ dynamic: true }))//buraya dokunma. bot kapanır aga öxzçlişzxö :D
+    .setTitle("Mnetor RolePlay Kayıt Botu")
+    .setColor("#ff0000")
+    .setFooter(`Mentor RolePlay`, luffyy.avatarURL({ dynamic: true }))//buraya dokunma. bot kapanır aga öxzçlişzxö :D
     .addField(
       "__Yardım Menüsü__", `
       
 \ \`${prefix}erkekrol\` : **Erkek Rolünü Ayarlar**
-
-\ \`${prefix}kızrol\` : **Kız Rolünü Ayarlar**
 
 \ \`${prefix}kayıtkanal\` : **Kayıt Kanalını Ayarlar**
 
@@ -34,10 +32,6 @@ exports.run = async (client, message, args) => {
 \ \`${prefix}kayıtsıfırla\` : **Kayıt Ayarlarını Sıfırlar**
 
 \ \`${prefix}e\` : **Erkek Kayıt Yapr**
-
-\ \`${prefix}k\` : **Kız Kayıt Yapar**
-
-\ \`${prefix}şablon\` : **Şablon Atar**
 
 `);
  
