@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
     .addField(
       "__Yardım Menüsü__", `
       
-\ \`${prefix}erkekrol\` : **Erkek Rolünü Ayarlar**
+\ \`${prefix}üyerol\` : **Üye Rolünü Ayarlar**
 
 \ \`${prefix}kayıtkanal\` : **Kayıt Kanalını Ayarlar**
 
@@ -31,7 +31,7 @@ exports.run = async (client, message, args) => {
 
 \ \`${prefix}kayıtsıfırla\` : **Kayıt Ayarlarını Sıfırlar**
 
-\ \`${prefix}e\` : **Erkek Kayıt Yapr**
+\ \`${prefix}k\` : **Erkek Kayıt Yapr**
 
 `);
  
