@@ -160,6 +160,12 @@ client.on("guildMemberAdd", async member => {
 
 client.on('message', message => {
   if (message.content.tolowerCase() === 'ip') {
-    message.author.send('Çok yakında hizmetinizdeyiz.');
+    const kanal = new MessageEmbed()
+    
+    .setTitle('Mentor Role Play')
+    .setDescription('Sunucumuz yakında sizin hizmetinizde.')
+    .setAuthor('Mentor Roleplay')
+    .setColor("#ff0000")
+    message.channel.send(kanal);
   }
 });
