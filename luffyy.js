@@ -13,7 +13,6 @@ process.on("unhandledRejection", (reason, promise) => {})
 
 
 
-
 client.on("message", message => {
   let client = message.client;
   if (message.author.bot) return;
@@ -157,4 +156,5 @@ client.on("guildMemberAdd", async member => {
  client.on("ready", () => {
   client.channels.cache.get("992227586455371786").join();   
 })
+
 
