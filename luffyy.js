@@ -4,7 +4,8 @@ const client=new Discord.Client();
 const db = require('quick.db')
 const moment = require("moment");
 const ayarlar=require("./ayarlar.json");
-const express = require("express")
+const express = require("express");
+const { Client, MessageEmbed } = require('discord.js');
 const app = express()
 app.get("/foo", (req, res, next) => {
     const foo = JSON.parse(req.body.jsonString)
@@ -157,4 +158,8 @@ client.on("guildMemberAdd", async member => {
   client.channels.cache.get("992227586455371786").join();   
 })
 
-
+client.on('message', message => {
+  if (message.content.tolowerCase() === 'ip') {
+    message.author.send('Çok yakında hizmetinizdeyiz.');
+  }
+});
