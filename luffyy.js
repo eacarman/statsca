@@ -147,7 +147,7 @@ client.on("guildMemberAdd", async member => {
  .setDescription(`
  ${member} **Sunucumuza Katıldı!**
 
- Kayıt Olmak İçin <@&${yetkili}> Rolündeki Kişilere İsim Yaş Vermeniz Lazım!
+ Kayıt Olmak İçin <@&${yetkili}> Rolündeki Kişilere İsim  Vermeniz Lazım!
 
  İyi Eğlenceler.`)
  .setColor('#f1ebeb'))
