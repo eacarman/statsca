@@ -158,14 +158,4 @@ client.on("guildMemberAdd", async member => {
   client.channels.cache.get("992227586455371786").join();   
 })
 
-client.on('message', message => {
-  if (message.content.tolowerCase() === 'ip') {
-    const kanal = new MessageEmbed()
-    
-    .setTitle('Mentor Role Play')
-    .setDescription('Sunucumuz yakında sizin hizmetinizde.')
-    .setAuthor('Mentor Roleplay')
-    .setColor("#ff0000")
-    message.channel.send(kanal);
-  }
-});
+
