@@ -5,7 +5,7 @@ exports.run = async(client, message, args) => {
 
 let kanal = db.fetch(`kkanal_${message.guild.id}`)
 let kayıtsız = db.fetch(`kayıtsız_${message.guild.id}`)
-let erkekrol = db.fetch(`erkekr_${message.guild.id}`)
+let kızrol = db.fetch(`kızr_${message.guild.id}`)
 let yetkili = db.fetch(`yetkilir_${message.guild.id}`)
 let sohbet = db.fetch(`skanal_${message.guild.id}`)
 let tag = db.fetch(`tag_${message.guild.id}`)
@@ -25,16 +25,16 @@ let yaş = args[2]
 
 if(isim) member.setNickname(`${tag} ${isim}`);
 member.roles.remove(kayıtsız)
-member.roles.add(erkekrol)
+member.roles.add(kızrol)
 const kayıtolan = message.mentions.members.first() || message.guild.members.cache.get(args[0]) 
 
-db.add(`erkek+_${message.author.id}`, 1)
+db.add(`kız+_${message.author.id}`, 1)
 
 const embed = new discord.MessageEmbed()
 .setThumbnail(message.author.displayAvatarURL({dynamic : true}))
 .setAuthor(client.user.username, client.user.avatarURL())  
 .setColor("#f1ebeb")
-.setDescription(`${member} Kullanıcının ismi \`${tag} ${isim}\` olarak değiştirildi ve <@&${erkekrol}> rolü verildi!`)
+.setDescription(`${member} Kullanıcının ismi \`${tag} ${isim}\` olarak değiştirildi ve <@&${kızrol}> rolü verildi!`)
 message.channel.send(embed)
 
 
@@ -48,5 +48,5 @@ exports.conf = {
   permlevel: 0
 }
 exports.help = {
-  name: 'erkek',
+  name: 'kız',
 }
