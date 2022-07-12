@@ -1,2 +1,8 @@
-# Luffyy [Ayarlamalı Kayıt Altyapısı](https://discord.gg/Ds7QdNmGqJ)
-İNTENTLERİ AÇMAYI UNUTMAYIN AGALARIM. İYİ KODLAMALAR!
+# İNTENTLERİ AÇMAYI UNUTMAYIN YOKSA BOT ÇALIŞMAYABİLİR
+
+discord sunucumuz: https://discord.gg/78nkYn28zu
+
+
+
+
+ZYronx kayıt botu

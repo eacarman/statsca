@@ -44,7 +44,7 @@ client.channels.cache.get(sohbet).send(`${member} **Sunucumuza Hoşgeldin!**`)
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['e'],
+  aliases: ['k'],
   permlevel: 0
 }
 exports.help = {

@@ -1,10 +1,10 @@
 {
-  "name": "kevzyy",
+  "name": "zyronx",
   "version": "0.0.1",
-  "author": "kevzyy",
-  "main": "luffyy",
+  "author": "zyronx",
+  "main": "zyronx",
   "scripts": {
-    "start": "node luffyy"
+    "start": "node zyronx"
   },
   "dependencies": {
     "chalk": "^4.1.2",

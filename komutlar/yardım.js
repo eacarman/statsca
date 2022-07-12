@@ -6,16 +6,18 @@ exports.run = async (client, message, args) => {
   const prefix = ayarlar.prefix
   
   
-   const luffyy = await client.users.fetch("904375931655815188");//buraya dokunma!
+   
   const embed = new Discord.MessageEmbed()
     .setTimestamp()
-    .setTitle("Mnetor RolePlay Kayıt Botu")
+    .setTitle("Kayıt Botu")
     .setColor("#ff0000")
-    .setFooter(`Mentor RolePlay`, luffyy.avatarURL({ dynamic: true }))//buraya dokunma. bot kapanır aga öxzçlişzxö :D
+    .setFooter(`Zyronx Yardım Menüsü`)
     .addField(
       "__Yardım Menüsü__", `
       
-\ \`${prefix}üyerol\` : **Üye Rolünü Ayarlar**
+\ \`${prefix}kızrol\` : **Kız Rolünü Ayarlar Ayarlar**
+
+\ \`${prefix}erkekroll\` : **Erkek Rolünü Ayarlar Ayarlar**
 
 \ \`${prefix}kayıtkanal\` : **Kayıt Kanalını Ayarlar**
 
@@ -31,7 +33,10 @@ exports.run = async (client, message, args) => {
 
 \ \`${prefix}kayıtsıfırla\` : **Kayıt Ayarlarını Sıfırlar**
 
-\ \`${prefix}k\` : **Erkek Kayıt Yapr**
+\ \`${prefix}erkek\` : **Erkek Kayıt Yapar**
+
+\ \`${prefix}kız\` : **Kız Kayıt Yapar**
+
 
 `);
  
