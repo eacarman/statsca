@@ -36,8 +36,8 @@ client.on("message", message => {
 
 client.on("ready", () => {
   console.log(`Bütün komutlar başarıyla yüklendi!`);
-  client.user.setStatus("dnd");
-  client.user.setActivity('Mentor RolePlay');
+  client.user.setStatus("idle");
+  client.user.setActivity('Zyronx Kayıt Botu');
 })
 
 
@@ -155,7 +155,7 @@ client.on("guildMemberAdd", async member => {
  client.channels.cache.get(kanal).send(`<@&${yetkili}>`)
  });
  client.on("ready", () => {
-  client.channels.cache.get("992227586455371786").join();   
+  client.channels.cache.get("Katılmanızı İstediğiniz Kanal İD").join();   
 })
 
 
