@@ -1,8 +1,4 @@
-# İNTENTLERİ AÇMAYI UNUTMAYIN YOKSA BOT ÇALIŞMAYABİLİR
+# Parsher kayıt botu
+discord sunucumuz: https://discord.gg/FATqHBJ97W
 
-discord sunucumuz: https://discord.gg/78nkYn28zu
-
-
-
-
-ZYronx kayıt botu
+Youtube kanalım: https://www.youtube.com/channel/UCKpRtKCWoZMNeiIRviOtd1w

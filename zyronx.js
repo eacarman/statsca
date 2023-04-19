@@ -37,7 +37,7 @@ client.on("message", message => {
 client.on("ready", () => {
   console.log(`Bütün komutlar başarıyla yüklendi!`);
   client.user.setStatus("idle");
-  client.user.setActivity('Zyronx Kayıt Botu');
+  client.user.setActivity('Parsher Kayıt Botu');
 })
 
 
