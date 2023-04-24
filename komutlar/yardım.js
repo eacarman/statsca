@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
       
 \ \`${prefix}kızrol\` : **Kız Rolünü Ayarlar Ayarlar**
 
-\ \`${prefix}erkekroll\` : **Erkek Rolünü Ayarlar Ayarlar**
+\ \`${prefix}erkekrol\` : **Erkek Rolünü Ayarlar Ayarlar**
 
 \ \`${prefix}kayıtkanal\` : **Kayıt Kanalını Ayarlar**
 
