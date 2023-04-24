@@ -34,10 +34,10 @@ client.on("message", message => {
 })
 
 
-client.on("ready", () => {
+client.on("ready", () => { 
   console.log(`Bütün komutlar başarıyla yüklendi!`);
   client.user.setStatus("idle");
-  client.user.setActivity('Parsher Kayıt Botu');
+  client.user.setActivity('Abone olun'); //bu araya ne yazarsanız botun durumu o olur
 })
 
 
