@@ -15,27 +15,12 @@ exports.run = async (client, message, args) => {
     .addField(
       "__Yardım Menüsü__", `
       
-\ \`${prefix}kızrol\` : **Kız Rolünü Ayarlar Ayarlar**
+\ \`${prefix}y-kayıt\` : **kayıt komutlarını gösterir**
 
-\ \`${prefix}erkekrol\` : **Erkek Rolünü Ayarlar Ayarlar**
+\ \`${prefix}deneme\` : **boş**
 
-\ \`${prefix}kayıtkanal\` : **Kayıt Kanalını Ayarlar**
 
-\ \`${prefix}sohbetkanal\` : **Sohbet Kanalını Ayarlar**
 
-\ \`${prefix}girişkanal\` : **Giriş Kanalını Ayarlar**
-
-\ \`${prefix}tag\` : **Tag Ayarlar ( İsterseniz Ayarlamayın! )**
-
-\ \`${prefix}yetkilirol\` : **Yetkili Rolü Ayarlar**
-
-\ \`${prefix}kayıtsızrol\` : **Kayıtsız Rolü Ayarlar**
-
-\ \`${prefix}kayıtsıfırla\` : **Kayıt Ayarlarını Sıfırlar**
-
-\ \`${prefix}erkek\` : **Erkek Kayıt Yapar**
-
-\ \`${prefix}kız\` : **Kız Kayıt Yapar**
 
 
 `);
@@ -48,7 +33,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["help"],
+  aliases: ["yardım"],
   permLevel: 0
 };
 
