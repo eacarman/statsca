@@ -1,45 +1,39 @@
-const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
+const Discord = require(`discord.js`);
+const db = require(`quick.db`)
 
-exports.run = (client, message, params) => {
-  if (!message.guild) {
-  const mesajsilindi = new Discord.RichEmbed()
-  const ozelmesajuyari = new Discord.RichEmbed()
-  .setColor(0xD97634)
-  .setTimestamp()
-  .setAuthor(message.author.username, message.author.avatarURL)
-  .setDescription(':fire: Üzgünüm, bunu yapamazsınız!')
-  return message.author.sendEmbed(ozelmesajuyari); }    
-  if (message.channel.type !== "group") {
-        var Durum = message.author.presence.status;
-        var Durm = (Durum == "online" ? (0x00AE86) : (Durum == "offline" ? (0x808080) : (Durum == "idle" ? (0xFFFF00) : (Durum == "dnd" ? (0xFF0000) : (0x00AE86)))))
-        var durm = (Durum == "online" ? ("Çevrimiçi") : (Durum == "offline" ? ("Çevrimdışı") : (Durum == "idle" ? ("Boşta") : (Durum == "dnd" ? ("Rahatsız Etmeyin") : ("Bilinmiyor/bulunamadı.")))))
-      const kullanicibilgimk = new Discord.RichEmbed()
-      const mesajsilindi = new Discord.RichEmbed()
-      .setThumbnail(message.author.avatarURL)
-      .setColor(0x808080)
-      .setTimestamp()
-      .addField('Kullanıcı adı;', message.author.username + '#' + message.author.discriminator)
-      .addField('ID;', message.author.id)
-      .addField('Kayıt tarihi;', message.author.createdAt)
-      .addField('Durum;', durm)
-      .addField('Şu an oynadığı oyun;', message.author.presence.game ? message.author.presence.game.name : 'Şu an oyun oynamamakta!')
-      .setFooter('$adista $adis BOT ', client.user.avatarURL)
-      console.log("Bu komut " + message.author.username + " tarafından kullanıldı.")
-      return message.channel.sendEmbed(mesajsilindi).then(msg => msg.delete(5000));
-      return message.channel.sendEmbed(kullanicibilgimk)
-  }
+exports.run = async(client, message, args) => {
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(`Bu Komutu Kullanabilmek İçin Yeterli Yetkiye Sahip Değilsin!`);
+let kişi = message.mentions.users.first()
+if(!args[0]) {
+    const abonestats = await db.fetch(`aboneistatistik${message.author.id}.${message.guild.id}`)
+    const codework1 = new Discord.MessageEmbed()
+    .setThumbnail(message.author.avatarURL())
+    .setTimestamp()
+    .setFooter(`${message.author.tag} Tarafından İstendi.`)
+    .setDescription(`**${message.author} İsimli Yetkilinin Toplam Kayıtı**
+    **▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**
+    **Toplam \`${abonestats ? abonestats : '0'}\` Abone Rolü Vermişsin.**
+    **▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**`)
+    message.channel.send(codework1)}
+if(kişi) {
+    const abonestats2 = await db.fetch(`aboneistatistik${kişi.id}.${message.guild.id}`)
+    const codework = new Discord.MessageEmbed()
+    .setAuthor(kişi.username, kişi.avatarURL)
+    .setThumbnail(message.mentions.users.first().avatarURL())
+    .setTimestamp()
+    .setFooter(`${message.author.tag} Tarafından İstendi.`)
+    .setDescription(`**Yetkilinin Bilgileri**
+    **▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**
+    **Toplam \`${abonestats2 ? abonestats2 : '0'}\` Abone Rolü Vermiş.**
+    **▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬**`)
+    message.channel.send(codework)}  
 };
-
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['user-info', 'kullanıcı-bilgi', 'kbilgim'],
-  permLevel: 0
+ enabled: true,
+ guildOnly: false,
+ aliases: ["abone-istatistik","abone-stats","abonestats"],
+ permLevel: 0,
 };
-
 exports.help = {
-  name: 'user-info',
-  description: 'Komutu kullanan kişi hakkında bilgi verir!',
-  usage: 'user-info'
+ name: 'aboneistatistik'
 };
