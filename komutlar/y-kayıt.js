@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
     .setTimestamp()
     .setTitle("Kayıt Botu")
     .setColor("#ff0000")
-    .setFooter(`Parsher Yardım Menüsü`)
+    .setFooter(`SCA Yardım Menüsü`)
     .addField(
       "__Yardım Menüsü__", `
       

@@ -37,7 +37,7 @@ client.on("message", message => {
 client.on("ready", () => { 
   console.log(`Bütün komutlar başarıyla yüklendi!`);
   client.user.setStatus("idle");
-  client.user.setActivity('Abone olun'); //bu araya ne yazarsanız botun durumu o olur
+  client.user.setActivity('`SCA Ayrıcalıktır'); //bu araya ne yazarsanız botun durumu o olur
 })
 
 
